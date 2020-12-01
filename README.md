@@ -1,5 +1,5 @@
 To learn TailWindCss
 
-learn-tailwindcss.surge.sh
+http://learn-tailwindcss.surge.sh
 
 Tutorial : youtube
