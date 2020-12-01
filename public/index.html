@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn TailWindCss</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #check:checked~ul {
+            height: 7rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="text-gray-600 font-body ">
+    <div class="grid md:grid-cols-4">
+        <!--Content warapper-->
+
+        <div class="md:col-span-1">
+            <nav>
+                <div class="flex justify-between p-4 shadow-md md:shadow-none md:border-b border-gray-200 ">
+                    <h1 class="font-bold uppercase ">
+                        <a href="/" class="text-indigo-600 sm:text-green-500 xl:text-pink-600">Food Ninja</a>
+
+                    </h1>
+                    <div class="cursor-pointer md:hidden">
+                        <label for="check" class="cursor-pointer">
+                            <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <input type="checkbox" id="check" name="check" class="hidden" />
+                <ul class="md:mt-6 h-0 transition-all ease-out duration-500 ">
+                    <li class="text-gray-900 font-bold mb-2">
+                        <a href="#"
+                            class="flex justify-end pr-2 border-r-4 border-primary hover:border-primary transition ease-out duration-300">
+                            <span>Home</span>
+                            <svg class="w-5 ml-2 xmlns=" http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a class="flex justify-end pr-2 border-r-4 border-secondary hover:border-primary transition ease-out duration-300"
+                            href="#">
+                            <span>About</span>
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a class=" transition ease-out duration-300 flex justify-end pr-2 border-r-4 border-secondary hover:border-primary"
+                            href="#">
+                            <span>Contact</span>
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                            </svg>
+
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <!--end nav-->
+
+        <main class="md:col-span-3 px-16 py-6 bg-gray-100 ">
+            <div class="flex justify-center lg:justify-end">
+                <a href="#"
+                    class="text-primary px-4 btn lg:border-2 hover:bg-primary hover:text-white transition-all ease-out duration-500">Log
+                    in</a>
+                <a href="#"
+                    class="text-secondary px-4 btn lg:border-2 ml-4 hover:bg-primary hover:text-white transition-all ease-out duration-500">Sign
+                    up</a>
+            </div>
+            <!-- <div class="flex justify-center items-center">
+                <div class="bg-red-300 h-6 w-6"></div>
+                <div class="bg-indigo-300 h-12 w-6"></div>
+                <div class="bg-green-300 h-20 w-6"></div>
+            </div> -->
+
+            <header>
+                <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
+                <h3 class="text-2xl font-semibold">For Ninja</h3>
+            </header>
+
+            <div>
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Recipes</h4>
+                <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+                    <!-- cards go here -->
+                    <div class="relative bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg">
+                        <div class="overflow-hidden">
+                            <img src="img/noodels.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover" />
+                        </div>
+
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div
+                            class="absolute top-0 ml-2 mt-2 bg-secondary bg-opacity-50 text-white text-xs uppercase font-bold rounded-full p-2">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/stew.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/curry.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+                    <!-- cards go here -->
+                    <div class="relative bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/noodels.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div
+                            class="absolute top-0 ml-2 mt-2 bg-secondary bg-opacity-50 text-white text-xs uppercase font-bold rounded-full p-2">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/stew.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/curry.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Most Popular Recipes</h4>
+                <div class="mt-8 grid lg:grid-cols-2 2xl:grid-cols-3 gap-5">
+                    <!-- cards go here -->
+                    <div class="relative bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/noodels.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div
+                            class="absolute top-0 ml-2 mt-2 bg-secondary bg-opacity-50 text-white text-xs uppercase font-bold rounded-full p-2">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/stew.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/curry.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <!-- cards go here -->
+                    <div class="relative bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/noodels.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div
+                            class="absolute top-0 ml-2 mt-2 bg-secondary bg-opacity-50 text-white text-xs uppercase font-bold rounded-full p-2">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/stew.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <!-- cards go here -->
+                    <div class="card hover:shadow-lg">
+                        <div class="overflow-hidden"><img src="img/curry.jpg" alt="stew"
+                                class="hover:scale-110 transform transition-all ease-out duration-500 w-full h-48 sm:h-60 object-cover">
+                        </div>
+                        <div class="p-5">
+                            <span class="font-bold">5 bean chilli stew</span><br />
+                            <span class="text-gray-500">Recipe by Mario</span>
+                        </div>
+                        <div class="badge">
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center mt-4">
+                    <div
+                        class="bg-secondary text-white btn px-4 hover:shadow-md hover:scale-150 transform transition-all ease-out duration-500">
+                        Load more</div>
+                </div>
+            </div>
+
+        </main>
+        <!--end main-->
+
+    </div>
+</body>
+
+</html>
